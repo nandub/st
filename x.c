@@ -207,6 +207,7 @@ static DC dc;
 static XWindow xw;
 static XSelection xsel;
 static TermWindow win;
+char winid[64];
 
 /* Font Ring Cache */
 enum {
@@ -1044,6 +1045,7 @@ xinit(int cols, int rows)
 			win.w, win.h, 0, XDefaultDepth(xw.dpy, xw.scr), InputOutput,
 			xw.vis, CWBackPixel | CWBorderPixel | CWBitGravity
 			| CWEventMask | CWColormap, &xw.attrs);
+	snprintf(winid, LEN(winid), "%lu", (unsigned long)xw.win);
 
 	memset(&gcvalues, 0, sizeof(gcvalues));
 	gcvalues.graphics_exposures = False;
