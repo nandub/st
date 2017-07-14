@@ -31,3 +31,5 @@ STLDFLAGS = $(LIBS) $(LDFLAGS)
 
 # compiler and linker
 # CC = c99
+CC = cc
+
