@@ -165,7 +165,7 @@ static MouseShortcut mshortcuts[] = {
 #define TERMMOD (ControlMask|ShiftMask)
 
 static char *openurlcmd[] = { "/bin/sh", "-c",
-    "xurls | rofi -dmenu -l 10 -columns 1 | xargs -r open",
+    "xurls | rofi -dmenu -l 10 -columns 1 | xargs -r piper",
     "externalpipe", winid, NULL };
 
 static Shortcut shortcuts[] = {
