@@ -34,12 +34,8 @@ void xsettitle(char *);
 int xsetcursor(int);
 void xsetmode(int, unsigned int);
 void xsetpointermotion(int);
-void xsetsel(char *, Time);
+void xsetsel(char *);
 int xstartdraw(void);
-void xseturgency(int);
-void xunloadfonts(void);
-void xresize(int, int);
-void xselpaste(void);
-unsigned long xwinid(void);
 
+unsigned long xwinid(void);
 extern char winid[64];
