@@ -153,17 +153,6 @@ typedef struct {
 	int narg;              /* nb of args */
 } STREscape;
 
-typedef struct {
-	KeySym k;
-	uint mask;
-	char *s;
-	/* three valued logic variables: 0 indifferent, 1 on, -1 off */
-	signed char appkey;    /* application keypad */
-	signed char appcursor; /* application cursor */
-	signed char crlf;      /* crlf mode          */
-} Key;
-
-static void externalpipe(const Arg *);
 static void execsh(char *, char **);
 static void stty(char **);
 static void sigchld(int);
